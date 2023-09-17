@@ -16,6 +16,8 @@ import ContactUs from'./ContactUs';
 import Footer from'./Footer';
 
 
+
+
 export default function Home() {
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
