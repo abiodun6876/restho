@@ -10,14 +10,14 @@ const containerStyle = {
   
   const textContainerStyle = {
     padding: '20px',
-    fontFamily: 'Arial, sans-serif',
+    fontFamily: 'Cormorant Garamond",serif',
     transition: 'transform 0.3s ease-in-out, opacity 0.3s ease-in-out', // Added transitions
   };
   
   const titleStyle = {
     fontSize: '48px',
     fontWeight: 'bold',
-    fontFamily: 'Cormorant Garamond,serif',
+    
     color: '#bf9444',
     marginBottom: '10px',
     transition: 'color 0.3s', // Added transition
@@ -26,7 +26,7 @@ const containerStyle = {
   const titleStyle2 = {
     fontSize: '48px',
     fontWeight: 'bold',
-    fontFamily: 'Cormorant Garamond,serif',
+    fontFamily: 'Cormorant Garamond",serif',
     color: 'white',
     marginBottom: '10px',
     transition: 'color 0.3s', // Added transition
@@ -34,7 +34,7 @@ const containerStyle = {
   
   const descriptionStyle = {
     fontSize: '14px',
-    fontFamily: 'Cormorant Garamond,serif',
+    fontFamily: 'Cormorant Garamond",serif',
     color: '#bf9444',
     marginBottom: '20px',
     transition: 'color 0.3s', // Added transition
@@ -52,20 +52,7 @@ const containerStyle = {
     transition: 'color 0.3s', // Added transition
   };
   
-  // Media query for mobile devices
-  if (window.innerWidth <= 768) {
-    // Adjust styles for mobile devices here
-    titleStyle.fontSize = '24px';
-    titleStyle2.fontSize = '36px';
-    descriptionStyle.fontSize = '16px';
-    buttonStyle.fontSize = '14px';
-  }
-  
-  // Media query for smaller screens (e.g., tablets)
-  if (window.innerWidth <= 1024) {
-    // Adjust styles for smaller screens here
-  }
-  
+ 
 
 const imageUrls = [
   'https://restho-nextjs.vercel.app/assets/images/bg/h2-banner-img2.png',
@@ -74,7 +61,7 @@ const imageUrls = [
   'https://restho-nextjs.vercel.app/assets/images/bg/h2-banner-img44.png',
 ];
 
-function   Welcome() {
+function Welcome() {
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
