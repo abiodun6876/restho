@@ -74,7 +74,7 @@ const imageUrls = [
   'https://restho-nextjs.vercel.app/assets/images/bg/h2-banner-img44.png',
 ];
 
-function Welcome() {
+function   Welcome() {
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
