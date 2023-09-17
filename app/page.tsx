@@ -6,7 +6,7 @@ import Navbar from './Navbar';
 import Blog from './Blog';
 import Header from './Header';
 
-import Welcome from './Welcome';
+import Welcome from './welcome';
 import Gallery from './Gallery';
 import Teams from './Teams';
 import AboutUs from'./About';
