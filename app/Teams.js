@@ -1,5 +1,6 @@
 'use client'
 import React, { useRef, useState, useEffect } from 'react';
+import Image from 'next/image'; // Import the Image component from next/image
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
@@ -35,7 +36,7 @@ const subHeaderTextStyle = {
 };
 
 const titleStyle = {
-    fontSize: '28px',
+  fontSize: '28px',
   fontWeight: 'bold',
   color: 'black',
   marginBottom: '20px',
@@ -136,21 +137,23 @@ function Teams() {
     };
   }, [hoveredIndex]);
 
-
- 
   return (
     <div style={cardStyle}>
       <div style={subHeaderStyle}>
-        <img
+        <Image
           src="https://restho-nextjs.vercel.app/assets/images/icon/sub-title-vec.svg"
           alt="Sub Header Image"
           style={subHeaderImageStyle}
+          width={30} // Set the desired width
+          height={30} // Set the desired height
         />
         <span style={subHeaderTextStyle}>Our Expertiess</span>
-        <img
+        <Image
           src="https://restho-nextjs.vercel.app/assets/images/icon/sub-title-vec.svg"
           alt="Sub Header Image"
           style={subHeaderImageStyle}
+          width={30} // Set the desired width
+          height={30} // Set the desired height
         />
       </div>
       <h2 style={titleStyle}>Restho's Best Chef</h2>
@@ -173,17 +176,19 @@ function Teams() {
                 <FontAwesomeIcon icon={faInstagram} style={socialIconStyle} />
               </div>
             </div>
-            <img
+            <Image
               src={item.url}
               alt={`Image ${index + 1}`}
               className="gallery-image"
               style={imageStyle}
+              width={250} // Set the desired width
+              height={250} // Set the desired height
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             />
-            <div style={{ textAlign: 'center', marginTop: '10px', fontFamily: 'Your Artistic Font, Arial, sans-serif', }}>
-              <p>{item.name}</p>
-              <p>{item.title}</p>
+            <div style={{ textAlign: 'center', marginTop: '10px',marginRight: '10px',marginLeft: '10px', fontFamily: 'Cormorant Garamond,serif', }}>
+              <p style={{ textAlign: 'center', marginTop: '10px',marginRight: '10px',marginLeft: '10px', fontFamily: 'Cormorant Garamond,serif', }}>{item.name}</p>
+              <p style={{ textAlign: 'center', marginTop: '10px',marginRight: '10px',marginLeft: '10px', fontFamily: 'Cormorant Garamond,serif', }}>{item.title}</p>
             </div>
           </div>
         ))}
@@ -193,3 +198,4 @@ function Teams() {
 }
 
 export default Teams;
+
