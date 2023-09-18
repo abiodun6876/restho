@@ -1,4 +1,6 @@
 'uses client'
+import Image from 'next/image'
+
 
 import React, { useState, useEffect } from 'react';
 const containerStyle = {
@@ -72,12 +74,7 @@ function Welcome() {
     return () => clearInterval(interval);
   }, []);
 
-  const subHeaderImageStyle = {
-    width: '30px',
-    height: 'auto',
-    marginRight: '10px',
-    marginLeft: '10px',
-  };
+  
   
 
   return (
@@ -101,15 +98,16 @@ function Welcome() {
       </div>
       <div>
         <div style={{ position: 'relative' }}>
-          <img
+                    <Image
             src={imageUrls[currentImage]}
             alt="Rotating Image"
+            width={250}
+            height={250}
             style={{
-              width: '250px',
-              height: '250px',
-              marginBottom: '10px',
+                marginBottom: '10px',
             }}
-          />
+            />
+
           {/* Dot dot indication */}
           <div
             style={{
