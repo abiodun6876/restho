@@ -78,16 +78,16 @@ function MenuList() {
         src="https://restho-nextjs.vercel.app/assets/images/icon/sub-title-vec.svg"
         alt="Sub Header Image"
         style={subHeaderImageStyle}
-        width={50} // Set width and height for the Image component
-        height={50}
+        width={500} // Set width and height for the Image component
+        height={500}
       />
       <span style={subHeaderTextStyle}>Menu List</span>
       <Image
         src="https://restho-nextjs.vercel.app/assets/images/icon/sub-title-vec.svg"
         alt="Sub Header Image"
         style={subHeaderImageStyle}
-        width={50} // Set width and height for the Image component
-        height={50}
+        width={500} // Set width and height for the Image component
+        height={500}
       />
     </div>
     <h2 style={titleStyle}>Find Your Food Item</h2>
@@ -95,21 +95,26 @@ function MenuList() {
     <a href="#" className="read-more">
           View More <FontAwesomeIcon icon={faArrowRight} />
         </a>
-    <div className="menu-list">
+        <div className="menu-list">
         
       
-      {menuData.map((item, index) => (
-        <div key={index} className="menu-item">
-          <img src={item.image} alt={item.name} className="food-item-image" />
-          <div className="food-item-details">
-            <span className="food-item-title">{item.title}</span>
-            <span className="food-item-price">{item.price}</span>
-            <h3 className="food-item-name">{item.name}</h3>
-            <p className="food-item-description">{item.description}</p>
+        {menuData.map((item, index) => (
+          <div key={index} className="menu-item">
+            <Image 
+            src={item.image} 
+            alt={item.name} 
+            width={500} // Set width and height for the Image component
+            height={500}
+            className="food-item-image" />
+            <div className="food-item-details">
+              <span className="food-item-title">{item.title}</span>
+              <span className="food-item-price">{item.price}</span>
+              <h3 className="food-item-name">{item.name}</h3>
+              <p className="food-item-description">{item.description}</p>
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
 
 
     <div className="menu-list">
@@ -120,8 +125,8 @@ function MenuList() {
             <Image 
             src={item.image} 
             alt={item.name} 
-            width={50} // Set width and height for the Image component
-            height={50}
+            width={500} // Set width and height for the Image component
+            height={500}
             className="food-item-image" />
             <div className="food-item-details">
               <span className="food-item-title">{item.title}</span>
