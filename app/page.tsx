@@ -1,22 +1,17 @@
 'use client'
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
-
-
 import Navbar from './Navbar';
 import Blog from './Blog';
 import Header from './Header';
-
 import Welcome from './welcome';
 import Gallery from './Gallery';
 import Teams from './Teams';
-import AboutUs from'./About';
-import NewItemSlider from'./NewItemSlider';
-import MenuList from'./MenuList';
-import ContactUs from'./ContactUs';
-import Footer from'./Footer';
-
-
-
+import AboutUs from './About';
+import NewItemSlider from './NewItemSlider';
+import MenuList from './MenuList';
+import ContactUs from './ContactUs';
+import Footer from './Footer';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -53,17 +48,16 @@ export default function Home() {
     document.body.style.overflowY = 'scroll';
   }, []);
 
-
-
-
   return (
     <div>
       <div className={`loading-container ${loading ? 'visible' : 'hidden'}`}>
         <div className="loading-text">{loading ? `${progress}%` : ''}</div>
-        <img
-          src="https://restho-nextjs.vercel.app/assets/images/header2-logo.svg"
+        <Image
+          src="/assets/images/header2-logo.svg"
           alt="Loading Logo"
           className="loading-logo"
+          width={200} // Set the desired width
+          height={200} // Set the desired height
         />
       </div>
 
@@ -91,31 +85,23 @@ export default function Home() {
 
           {/* Include the Navbar component */}
           <Navbar />
-         
-
 
           <Welcome />
-       
-         <AboutUs/>
 
+          <AboutUs />
 
+          <Gallery />
 
-          <Gallery/>
-         
+          <NewItemSlider />
 
-          <NewItemSlider/>
+          <MenuList />
 
-<MenuList/>
-
-          <Teams/>
-        
+          <Teams />
 
           <Blog />
-         
-<ContactUs/>
-<Footer/>
 
-
+          <ContactUs />
+          <Footer />
         </div>
       )}
     </div>
