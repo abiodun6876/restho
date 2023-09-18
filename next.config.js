@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-      domains: ['restho-nextjs.vercel.app'],
+      domains: ['restho-nextjs.vercel.app','g.foolcdn.com'],
       remotePatterns: [
         {
           protocol: 'https',
