@@ -45,7 +45,7 @@ const Navbar = () => {
       <div className="container">
         <h1 className="logo">
           <Image
-            src="/assets/images/header2-logo.svg"
+            src="https://restho-nextjs.vercel.app/assets/images/header2-logo.svg"
             alt="Company Logo"
             width={200} // Set the desired width
             height={100} // Set the desired height
@@ -128,3 +128,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
