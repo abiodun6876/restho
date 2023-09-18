@@ -156,7 +156,7 @@ function Teams() {
           height={30} // Set the desired height
         />
       </div>
-      <h2 style={titleStyle}>Restho's Best Chef</h2>
+      <h2 style={titleStyle}>Restho&apos;s Best Chef</h2>
       <div style={columnContainerStyle} ref={containerRef}>
         {imageUrls.map((item, index) => (
           <div
@@ -198,4 +198,3 @@ function Teams() {
 }
 
 export default Teams;
-
