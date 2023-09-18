@@ -2,26 +2,27 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faMapMarker } from '@fortawesome/free-solid-svg-icons';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 const Header = () => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
-  useEffect(() => {
-   
+  // Use useRef to store the mutable value
+  const prevScrollPosRef = useRef(0);
 
+  useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
 
-      if (prevScrollPos > currentScrollPos && !isHeaderVisible) {
+      if (prevScrollPosRef.current > currentScrollPos && !isHeaderVisible) {
         // User is scrolling up, show the header
         setIsHeaderVisible(true);
-      } else if (prevScrollPos < currentScrollPos && isHeaderVisible) {
+      } else if (prevScrollPosRef.current < currentScrollPos && isHeaderVisible) {
         // User is scrolling down, hide the header
         setIsHeaderVisible(false);
       }
 
-      prevScrollPos = currentScrollPos;
+      prevScrollPosRef.current = currentScrollPos; // Update the mutable value
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -68,4 +69,3 @@ const Header = () => {
 };
 
 export default Header;
-
