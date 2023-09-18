@@ -2,6 +2,7 @@ import React from 'react';
 import './MenuList.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import Image from 'next/image'; // Import the Image component
 
 const menuData = [
   {
@@ -73,16 +74,20 @@ function MenuList() {
 
     <div style={NewItemSlide} >
     <div style={subHeaderStyle}>
-      <img
+      <Image
         src="https://restho-nextjs.vercel.app/assets/images/icon/sub-title-vec.svg"
         alt="Sub Header Image"
         style={subHeaderImageStyle}
+        width={50} // Set width and height for the Image component
+        height={50}
       />
       <span style={subHeaderTextStyle}>Menu List</span>
-      <img
+      <Image
         src="https://restho-nextjs.vercel.app/assets/images/icon/sub-title-vec.svg"
         alt="Sub Header Image"
         style={subHeaderImageStyle}
+        width={50} // Set width and height for the Image component
+        height={50}
       />
     </div>
     <h2 style={titleStyle}>Find Your Food Item</h2>
@@ -112,7 +117,12 @@ function MenuList() {
       
         {menuData.map((item, index) => (
           <div key={index} className="menu-item">
-            <img src={item.image} alt={item.name} className="food-item-image" />
+            <Image 
+            src={item.image} 
+            alt={item.name} 
+            width={50} // Set width and height for the Image component
+            height={50}
+            className="food-item-image" />
             <div className="food-item-details">
               <span className="food-item-title">{item.title}</span>
               <span className="food-item-price">{item.price}</span>
